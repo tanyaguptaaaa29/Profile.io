@@ -1,0 +1,481 @@
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #2b2c2c;
+  overflow: hidden;
+}
+body {
+  background-image: url("https://picsum.photos/id/58/200/300"); /* Replace 'background-image.jpg' with the path to your image */
+  background-size: cover;
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  width:100%;
+}
+
+.navbar .nav-link .item {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.navbar .nav-link .item:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #feb633;
+  transition: width 0.3s;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar .nav-link .item:hover {
+  color: #feb633;
+}
+
+.navbar .nav-link .item:hover:after {
+  width: 100%;
+}
+
+.custom-toggler-icon {
+  /* Custom class for the toggle icon */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.image {
+  padding-left: 150px;
+}
+
+.logo{
+  border-bottom: #2b2c2c solid 0.5px;
+}
+.home {
+  height: 100%;
+}
+.waves {
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    max-height: 150px;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+/*Shrinking for mobile*/
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+}
+.About-Me {
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #2b2c2c;
+  border-bottom: #7a7b7d solid 0.5px;
+}
+
+.about-logo {
+  background-color: #2b2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin: 0;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.circle {
+  position: relative;
+  width: 80%; 
+  max-width: 400px; 
+  height: auto;
+  padding-bottom: 80%; 
+  border-radius: 50%;
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text h1 {
+  background: linear-gradient(to right, #f90, #fc0);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.text span {
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(to right, #f90, #fc0);
+  margin: 0 auto;
+}
+
+.about-text {
+  color: white;
+}
+
+.eb-garamond-about {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.services-text h2 {
+  font-size: 50px;
+  background: linear-gradient(to right, #f90, #fc0);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.transparent-div {
+  background-color: rgba(70, 130, 180, 0.5);
+}
+
+.home {
+  background-color: white;
+}
+
+.services {
+  background-color: #2b2c2c;
+}
+
+.freeman-regular {
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.data {
+  display: flexbox;
+  flex-direction: row;
+  color: white;
+  padding: 3%;
+}
+
+.numbers {
+  text-align: center;
+  font-size: 50px;
+}
+
+.data div {
+  font-size: 25px;
+}
+
+.work {
+  background-color: #2b2c2c;
+}
+
+.work-text {
+  font-size: 60px;
+  background: linear-gradient(to right, #f90, #fc0);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.work-title {
+  color: white;
+}
+
+.jersey-20-regular {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+
+.work p {
+  color: #7a7b7d;
+  font-size: 15px;
+}
+.services-item p {
+  color: #7a7b7d;
+}
+.services-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust gap between icon and text */
+}
+
+.services-heading svg {
+  width: 24px; /* Adjust size of the icon */
+  height: 24px; /* Adjust size of the icon */
+  fill: #feb633; /* Change color of the icon */
+}
+
+.services-heading .services-text {
+  font-family: 'Jersey', sans-serif; /* Ensure the font-family is loaded */
+  color: white; /* Text color */
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.work.visible h2,
+.work.visible .col {
+  animation: fadeIn 3s ease-in-out forwards;
+  opacity: 0; /* Start with the elements hidden */
+}
+
+.work .col {
+  border: #2b2c2c solid 1px;
+  padding: 3%;
+  background-color: #444444;
+  transition: background-color 0.3s ease;
+}
+
+.work .col:hover {
+  background-color: #feb633;
+  color: #2b2c2c;
+}
+
+.smallSvg{
+  width: 50px;
+  height: auto;
+  fill: #feb633;
+  background-color: #444444;
+}
+
+.hovered h3 {
+  color: #2b2c2c;
+}
+
+.hovered p {
+  color: #2b2c2c;
+}
+
+.hovered .smallSvg{
+  fill:#444444;
+  background-color: #feb633;
+
+}
+/* contact form */
+
+.contact {
+  height: auto;
+  border-top: #7a7b7d solid 1px;
+  background-color: #2b2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  padding-top: none;
+  border-bottom: #444444 solid 0.5px;
+}
+
+.contact-heading {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-heading h2 {
+  color: #cccccc;
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.contact-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #f90, #fc0);
+  margin: 0 auto;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.contact-top {
+  display: flex;
+}
+
+.name,
+.phone,
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 1.05%;
+}
+
+.contact-top {
+  width: 72%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name input,
+.phone input,
+.email input {
+  width: 100%;
+  height: 50px;
+  background-color: #444444;
+  color: #7a7b7d;
+  border: none;
+  outline: none;
+}
+
+.title {
+  font-size: 17px;
+  color: #7a7b7d;
+  padding-bottom: 2px;
+}
+
+.contact-bottom {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-bottom textarea {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background-color: #444444;
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+.contact-bottom textarea:placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.contact button{
+  padding:0.5%;
+  margin-top: 20px;
+}
+
+/* links */
+
+.links{
+  height: 100px;
+  border-bottom: #444444 solid 1px;
+  display: flex;
+  background-color: #2b2c2c;
+  justify-content: center;
+  align-items: center;
+}
+
+.links i{
+  color:#444444;
+  font-size: 23px;
+  height: auto;
+  width: auto;
+  padding: 15px;
+}
+
+.links i:hover{
+  color: #7a7b7d;
+  transition: color 0.3s ease;
+}
